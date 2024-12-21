@@ -8,7 +8,7 @@
   <script src="lib/typed.js" type="text/javascript"></script>
   <script src="assets/demos.js"></script>
   <link href="assets/demos.css" rel="stylesheet"/>
-  
+
   
 
   <link rel="shortcut icon" type="image/png" href="birthday.png">
@@ -83,7 +83,17 @@
                                 <p>You make everything better </p>
                                 <p>and I promise to keep trying my best </p>
                                 <p>no matter what life brings </p>
-                                <p>so we can go hand in hand all the way to the end.</p>
+                                let myAudio = new Audio("https://cdn.pixabay.com/audio/2024/02/14/audio_b9bc3934cc.mp3"); // Create an Audio object with the file 'Ceylon.mp3'
+
+                                window.onload = function() {
+                                    setInterval(GameLoop, 1000 / 10); // Start the game loop when the window is loaded
+                                };
+                                
+                                function GameLoop() {
+                                    if (myAudio.paused) { // Check if the audio is paused
+                                        myAudio.play(); // If paused, play the audio
+                                    }
+                                }      <p>so we can go hand in hand all the way to the end.</p>
                               <p>Thank you for being my partner, my love </p>
                               <p>and my best friend. </p>
                             <p>I can’t wait to see what beautiful moments </p>
@@ -101,10 +111,7 @@
            
   </div>
 </div>
-<audio id="birthday-audio" loop>
-  <source src="hbd.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+
 <script>
 let myAudio = new Audio("hbd.mp3"); // Create an Audio object with the file 'Ceylon.mp3'
 
