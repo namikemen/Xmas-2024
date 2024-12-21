@@ -101,10 +101,22 @@
            
   </div>
 </div>
-<audio autoplay loop>
+<audio id="birthday-audio" loop>
   <source src="hbd.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
 </audio>
 <script>
+let myAudio = new Audio("hbd.mp3"); // Create an Audio object with the file 'Ceylon.mp3'
+
+window.onload = function() {
+    setInterval(GameLoop, 1000 / 10); // Start the game loop when the window is loaded
+};
+
+function GameLoop() {
+    if (myAudio.paused) { // Check if the audio is paused
+        myAudio.play(); // If paused, play the audio
+    }
+}
 
 setTimeout(function() {
   $('#ll').hide()
